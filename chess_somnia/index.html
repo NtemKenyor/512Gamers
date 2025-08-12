@@ -92,6 +92,7 @@
             }
             
             // Store walletAddress in cookie for other pages
+            console.log("setting this as wallet add: ", walletAddress);
             setCookie('walletAddress', walletAddress);
             
             // Determine if we're running locally
@@ -104,7 +105,7 @@
             
             const externalUrl = isLocalhost
                 ? 'http://localhost/Chess-Sol/chessol-pure/game.html'
-                : 'https://chesssol.com/game.html'; // Replace with your production URL
+                : 'https://chesssol.com/pure/game.html'; // Replace with your production URL
             
             updateStatus('Connecting to game server...');
             
