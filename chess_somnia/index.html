@@ -137,13 +137,13 @@
                     console.log('Game created with ID:', data.gameId);
                     
                     // Now join the game we just created
-                    const joinGameMessage = {
-                        type: 'join',
-                        gameId: data.gameId,
-                        walletAddress: walletAddress
-                    };
+                    // const joinGameMessage = {
+                    //     type: 'join',
+                    //     gameId: data.gameId,
+                    //     walletAddress: walletAddress
+                    // };
                     
-                    socket.send(JSON.stringify(joinGameMessage));
+                    // socket.send(JSON.stringify(joinGameMessage));
                 }
                 else if (data.type === 'joined') {
                     updateStatus('Game ready! Redirecting...');
