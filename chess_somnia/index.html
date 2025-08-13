@@ -152,8 +152,10 @@
                     // Redirect to external URL with game details
                     const redirectUrl = new URL(externalUrl);
                     redirectUrl.searchParams.append('gameId', data.gameId);
+                    redirectUrl.searchParams.append('walletAddress', walletAddress);
                     redirectUrl.searchParams.append('playerColor', data.color);
                     redirectUrl.searchParams.append('fen', data.fen);
+
                     
                     // Small delay to let user see the final status
                     setTimeout(() => {
