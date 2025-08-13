@@ -848,7 +848,17 @@
       tap_lengend: { path: 'Roynek Grows Bot/encrypted_index.php?tele_id=-1&hash=1000&username=anonymous', title: '👆 Tap Legend', type: 'free' },
       
       // Paid games
-      chess_somnia: { path: 'chess_somnia/index.html?walletAddress='+userAddress, title: '♟️ Chess Somnia', type: 'paid' }
+      //TODO: this userAddress returns null but I want to return the original wallet address of the user so that it is added to this church.
+      // chess_somnia: { path: 'chess_somnia/index.html?walletAddress='+userAddress, title: '♟️ Chess Somnia', type: 'paid' }
+      // Paid games
+      chess_somnia: { 
+        get path() {
+          return `chess_somnia/index.html?walletAddress=${encodeURIComponent(userAddress || '')}`;
+        },
+        title: '♟️ Chess Somnia', 
+        type: 'paid' 
+      }
+
     };
 
     // Connection state management
